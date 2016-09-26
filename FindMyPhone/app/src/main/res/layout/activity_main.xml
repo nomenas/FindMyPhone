@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:id="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/band1"
+            android:maxHeight="50dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="band image" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lblStatus"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/lblDescription"
+            android:layout_below="@+id/lblStatus"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/imageView"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wait For Moment ..."
+            android:id="@+id/btnIAddRemoveTile"
+            android:onClick="addRemoveTile"
+            android:layout_alignEnd="@+id/btnLeaveFeedback"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/lblDescription" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buy Me a Beer"
+            android:id="@+id/btnBuyMeABeer"
+            android:onClick="buyMeABeer" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Leave Feedback"
+            android:id="@+id/btnLeaveFeedback"
+            android:layout_alignParentTop="false"
+            android:layout_alignEnd="@+id/lblStatus"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btnIAddRemoveTile"
+            android:onClick="sendFeedback" />
+    </LinearLayout>
+
+</RelativeLayout>
